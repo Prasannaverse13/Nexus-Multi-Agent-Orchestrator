@@ -14,6 +14,9 @@ The system follows a **Modular Agentic Workflow** pattern, built on the **Google
 - **A2A Control Plane:** Utilizes the Gemini 2.5 Flash Multimodal Live API to provide a real-time "heartbeat" and summary of agent dialogue, ensuring low-latency observability.
 - **Tech Choice:** **TypeScript** was selected for its type-safety, which is critical when managing complex JSON handshakes between agents to prevent runtime schema mismatches.
 
+  <img width="3043" height="2602" alt="Nexus End-to-End Vertical Flow" src="https://github.com/user-attachments/assets/caafca62-fa62-491f-82fc-71e5d1265afe" />
+
+
 ## 3. Agent Design
 Each agent is governed by a strict System Instruction (System Prompt) that defines its operational boundaries:
 
