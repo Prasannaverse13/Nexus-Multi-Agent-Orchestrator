@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Multi-Agent OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        :root {
+          /* Dark Mode (Default) */
+          --bg-main: #111212;
+          --bg-card: #191a1a;
+          --bg-chip: #111212;
+          --accent-blue: #2094f3;
+          --border-color: #2d2e2e;
+          --text-primary: #ffffff;
+          --text-secondary: #9ea2a2;
+          --input-placeholder: #64748b;
+          --shadow-color: rgba(0, 0, 0, 0.7);
+        }
+
+        [data-theme='light'] {
+          /* Light Mode */
+          --bg-main: #f3f4f6;
+          --bg-card: #ffffff;
+          --bg-chip: #f9fafb;
+          --accent-blue: #2563eb;
+          --border-color: #e5e7eb;
+          --text-primary: #111827;
+          --text-secondary: #4b5563;
+          --input-placeholder: #9ca3af;
+          --shadow-color: rgba(0, 0, 0, 0.05);
+        }
+
+        body { 
+          font-family: 'Inter', sans-serif; 
+          background-color: var(--bg-main); 
+          color: var(--text-primary); 
+          overflow-x: hidden;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        #root {
+          width: 100%;
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .main-frame {
+          border: 1px solid rgba(59, 130, 246, 0.5);
+          border-radius: 12px;
+          padding: 3rem;
+          width: 100%;
+          min-height: 85vh;
+          max-height: 95vh;
+          position: relative;
+          background: var(--bg-main);
+          box-shadow: 0 0 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(59, 130, 246, 0.05);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          overflow-y: auto;
+          box-sizing: border-box;
+        }
+
+        .perplex-input-container {
+          background: var(--bg-card);
+          border: 1px solid var(--border-color);
+          border-radius: 16px;
+          transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+          box-shadow: 0 15px 35px -5px var(--shadow-color);
+          width: 100%;
+        }
+
+        .perplex-input-container:focus-within {
+          border-color: var(--accent-blue);
+          box-shadow: 0 0 25px rgba(32, 148, 243, 0.15);
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.3); border-radius: 10px; }
+
+        .theme-btn {
+          position: absolute;
+          top: 32px;
+          right: 32px;
+          z-index: 100;
+          background: var(--bg-card);
+          border: 1px solid var(--border-color);
+          padding: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+          color: var(--text-primary);
+          box-shadow: 0 4px 12px var(--shadow-color);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .theme-btn:hover {
+          transform: scale(1.1) rotate(15deg);
+          border-color: var(--accent-blue);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Nexus Multi-Agent Orchestrator",
+  "description": "A production-grade multi-agent AI system dashboard for planning, executing, and monitoring complex business tasks using Gemini and ADK principles.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
