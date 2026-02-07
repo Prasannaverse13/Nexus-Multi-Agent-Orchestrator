@@ -1,5 +1,4 @@
 # Nexus Multi-Agent Orchestrator
-### Wand AI Engineering Challenge: Production-Grade Swarm Synthesis
 
 ## 1. Project Overview
 The **Nexus Multi-Agent Orchestrator** is a specialized AI system designed to decompose high-level, ambiguous business requests into executable sub-tasks handled by a swarm of autonomous agents. 
